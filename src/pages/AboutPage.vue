@@ -27,10 +27,16 @@
     </el-col>
 
   </el-row>
+  {{name1}}
 </template>
 <script setup>
 import {onMounted, reactive, ref} from "vue";
 import {login} from "../api";
+import {inject} from "vue";
+
+
+const name1 = inject("name")
+
 
 onMounted(()=>{
   login({name:"wangpengyu"}).then(res=>{
