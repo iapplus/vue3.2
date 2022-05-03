@@ -1,22 +1,21 @@
 <template>
   <Navigate/>
-  <div class="container mt-2 wow animate__animated animate__fadeIn" data-wow-delay="0.1s">
+  <div class="container mt-2 wow animate__animated animate__fadeIn" data-wow-delay="0.2s">
     <header class="rounded-3 bg-image" :style="{
       backgroundImage: `url(${img})`
     }">
       <div class="container">
         <div class="col-md-8 p-lg-5 mx-auto my-3 h-100">
-          <h1 class="display-6 fw-normal">Python自动测试工具定制</h1>
+          <h1 class="display-6 fw-normal">基于Qt的自动办公效率工具</h1>
           <p class="lead fw-normal">世界级大型电商网站，视频网站均可抓取</p>
           <p class="lead fw-normal">无图模式降低内存消耗的同时减少了GPU的计算以及带宽的占用，爬取效率提升80%</p>
           <p class="lead fw-normal">无头模式可以部署在Linux系统</p>
-          <p class="lead fw-normal">使用pyqt编写UI界面</p>
           <a class="btn btn-outline-dark btn-lg" onclick="">了解详情</a>
         </div>
       </div>
     </header>
     <div class="row align-items-md-stretch mt-4">
-      <div class="col-md-6 wow animate__animated animate__fadeIn" data-wow-delay="0.6s">
+      <div class="col-md-6 wow animate__animated animate__fadeIn" data-wow-delay="0.4s">
         <div class="h-100 p-5 rounded-3 bg-dark text-white bg-image" :style="{
       backgroundImage: `url(${img_001})`
     }">
@@ -25,32 +24,31 @@
           <button class="btn btn-outline-light" type="button">了解更多</button>
         </div>
       </div>
-      <div class="col-md-6 mt-sm-4 mt-md-0 mt-xs-4 mt-4 wow animate__animated animate__fadeIn" data-wow-delay="0.9s"
+      <div class="col-md-6 mt-sm-4 mt-md-0 mt-xs-4 mt-4 wow animate__animated animate__fadeIn" data-wow-delay="0.6s"
            style="height: auto">
         <div class="h-100 p-5 rounded-3"
              style="background-image: linear-gradient(to top, #e6e9f0 0%, #eef1f5 100%);">
-          <h2></h2>
-          <p>提供知识较高的视频</p>
+          <h2>针对企业的效率工具</h2>
+          <p>砍掉重复性劳动，为企业节约时间</p>
           <button class="btn btn-outline-secondary" type="button">即将到来</button>
         </div>
       </div>
     </div>
 
     <div class="row align-items-md-stretch mt-4">
-      <div class="col-md-6 wow animate__animated animate__slideInLeft" data-wow-delay="0.3s" style="height: auto">
+      <div class="col-md-6 wow animate__animated animate__slideIn" data-wow-delay="0.8s" style="height: auto">
         <div class="h-100 p-5 rounded-3 text-white"
              style="background-image: linear-gradient(to right, #fa709a 0%, #fee140 100%);">
           <h2>响应式网页开发</h2>
-          <p></p>
+          <p>移动端、个人电脑、平板使用一套代码</p>
           <button class="btn btn-outline-light" type="button">了解更多</button>
         </div>
 
       </div>
-      <div class="col-md-6 mt-sm-4 mt-md-0 mt-xs-4 mt-4 wow animate__animated animate__slideInRight"
-           data-wow-delay="0.6s" style="height: auto">
+      <div class="col-md-6 mt-sm-4 mt-md-0 mt-xs-4 mt-4 wow animate__animated animate__slideIn" data-wow-delay="1s" style="height: auto">
         <div class="h-100 p-5 rounded-3 bg-dark text-white">
-          <h2></h2>
-          <p></p>
+          <h2>能进行自我提升的有价值课程</h2>
+          <p>移动端、个人电脑、平板使用一套代码</p>
           <button class="btn btn-outline-light" type="button">了解更多</button>
         </div>
       </div>

@@ -6,8 +6,8 @@ export default {
         article:"article",
     },
     project:{
-        mobile_app:"mobile_application",
+        mobile_app:"mobile application",
         crawler:"crawler",
-        responsive_web:"responsive_web"
+        responsive_web:"responsive web"
     }
 }
