@@ -1,9 +1,11 @@
 import {createRouter, createWebHistory} from "vue-router";
 
-import AboutPage from "./pages/AboutPage.vue";
-import Layout from "./pages/Layout.vue";
 import Index from "./pages/Index.vue";
 import Product from "./pages/Product.vue";
+import ProductApplication from "./pages/ProductApplication.vue";
+import ProductCrawler from "./pages/ProductCrawler.vue";
+import ProductWeb from "./pages/ProductWeb.vue";
+import ProductWechat from "./pages/ProductWechat.vue";
 
 
 const routes = [
@@ -25,7 +27,33 @@ const routes = [
         path: '/', component: Index
     },
     {
-        path: '/product', component: Product
+        path: '/product', component: Product, children: [
+            {
+                path: '',
+                name: "default",
+                component: ProductApplication
+            },
+            {
+                path: 'application',
+                name: "application",
+                component: ProductApplication
+            },
+            {
+                path: 'web',
+                name: "web",
+                component: ProductWeb
+            },
+            {
+                path: 'crawler',
+                name: "crawler",
+                component: ProductCrawler
+            },
+            {
+                path: 'wechat',
+                name: "wechat",
+                component: ProductWechat
+            },
+        ]
     },
     {
         path: '/component', component: Index
