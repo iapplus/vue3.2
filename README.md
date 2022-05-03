@@ -1,1 +1,1 @@
-# vue3.2
+npm i lottie-web -S

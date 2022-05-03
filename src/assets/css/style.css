@@ -1,0 +1,45 @@
+.feature {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    height: 3rem;
+    width: 3rem;
+    font-size: 1.5rem;
+}
+
+a, a:hover, a:focus {
+    text-decoration: none;
+}
+
+body{
+    user-select: none;
+}
+
+.text-gradient-style-1 {
+    background: -webkit-linear-gradient(#b8cbb8 0%, #b8cbb8 0%, #b465da 0%, #cf6cc9 33%, #ee609c 66%, #ee609c 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.text-gradient-style-2 {
+    background: -webkit-linear-gradient(180deg, #868f96 0%, #596164 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.text-gradient-style-3 {
+    background: -webkit-linear-gradient(-20deg, #b721ff 0%, #21d4fd 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.text-gradient-style-4 {
+    background: -webkit-linear-gradient(60deg, #ec77ab 0%, #7873f5 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.text-gradient-style-5 {
+    background: -webkit-linear-gradient(190deg, #00dbde 0%, #fc00ff 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}

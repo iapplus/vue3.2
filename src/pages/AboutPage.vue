@@ -30,19 +30,30 @@
   {{name1}}
 </template>
 <script setup>
-import {onMounted, reactive, ref} from "vue";
+import {onMounted, reactive, ref, watchEffect} from "vue";
 import {login} from "../api";
 import {inject} from "vue";
+
+let x = ref('xxx')
+
+setTimeout(()=>{
+  x.data = "王鹏宇"
+  console.log(x.data)
+},4000)
+watchEffect(()=>{
+  console.log(x)
+  console.log("watchEffect")
+})
 
 
 const name1 = inject("name")
 
 
-onMounted(()=>{
-  login({name:"wangpengyu"}).then(res=>{
+onMounted(async () => {
+  await login({name: "wangpengyu"}).then(res => {
     console.log("<<<")
     console.log(res.data)
-  }).catch(err=>{
+  }).catch(err => {
     console.log(err)
   })
 })

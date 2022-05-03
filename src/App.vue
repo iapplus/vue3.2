@@ -26,5 +26,5 @@ import Abcdef from "./components/Abcdef.vue";
 </script>
 
 <style>
-@import "reset.css";
+@import "assets/css/reset.css";
 </style>
