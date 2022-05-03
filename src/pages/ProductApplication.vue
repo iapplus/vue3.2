@@ -1,12 +1,11 @@
 <template>
-  <div
-      class="position-relative overflow-hidden p-3 p-md-5 m-md-3 text-center bg-light rounded-3  wow animate__animated animate__fadeIn">
+  <div class="position-relative overflow-hidden p-3 p-md-5 m-md-3 text-center bg-light rounded-3 wow animate__animated animate__fadeIn">
     <div class="col-md-5 p-lg-5 mx-auto">
       <h1 class="display-4 fw-normal">react native 高仿某自营电商APP</h1>
       <p class="lead fw-normal">主流技术，稳定可靠。</p>
-      <a class="btn btn-outline-secondary" href="#">申请体验</a>
+      <button id="apply">申请体验</button>
     </div>
-    <div class="product-device shadow-sm d-none d-md-block">
+    <div class="product-device shadow-sm d-none d-md-block wow animate__animated animate__fadeIn">
       <img src="/src/assets/images/app_2.png" class="d-block w-100" alt="...">
     </div>
     <div class="product-device product-device-2 shadow-sm d-none d-md-block">
@@ -16,18 +15,20 @@
 
   <div class="d-md-flex flex-md-equal w-100 my-md-3 ps-md-3">
     <div
-        class="bg-dark me-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center text-white overflow-hidden rounded-3  wow animate__animated animate__fadeInLeft"
+        class="bg-dark me-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center text-white overflow-hidden rounded-3  wow animate__animated animate__fadeIn"
         style="background-color: #21D4FD;
 background-image: linear-gradient(19deg, #21D4FD 0%, #B721FF 100%);
 ">
-      <div class="my-3 py-3">
-        <h2 class="display-5">人机交互专项研究</h2>
-        <p class="lead">小屏幕，大显身手</p>
-      </div>
-      <div class="bg-light shadow-sm mx-auto   wow animate__animated animate__slideInUp" data-wow-delay="0.4s"
-           style="width: 80%; height: 300px; border-radius: 21px 21px 0 0;">
-        <img src="/src/assets/images/app_3.png" class="d-block w-100" alt="">
+      <div class="wow animate__animated animate__fadeInLeft">
+        <div class="my-3 py-3">
+          <h2 class="display-5">人机交互专项研究</h2>
+          <p class="lead">小屏幕，大显身手</p>
+        </div>
+        <div class="bg-light shadow-sm mx-auto   wow animate__animated animate__slideInUp" data-wow-delay="0.4s"
+             style="width: 80%; height: 300px; border-radius: 21px 21px 0 0;">
+          <img src="/src/assets/images/app_3.png" class="d-block w-100" alt="">
 
+        </div>
       </div>
     </div>
     <div
@@ -43,14 +44,13 @@ background-image: linear-gradient(19deg, #21D4FD 0%, #B721FF 100%);
       </div>
     </div>
   </div>
-
   <div class="d-md-flex flex-md-equal w-100 my-md-3 ps-md-3">
     <div
-        class="bg-light me-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden rounded-3 wow animate__animated animate__fadeInLeft"
+        class="bg-light me-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden rounded-3 wow animate__animated animate__fadeIn"
         style="background-color: #FBDA61;
 background-image: linear-gradient(45deg, #FBDA61 0%, #FF5ACD 100%);
 ">
-      <div class="my-3 p-3 text-white">
+      <div class="my-3 p-3 text-white  wow animate__animated animate__fadeInLeft">
         <h2 class="display-5">跨平台</h2>
         <p class="lead">基于facebook开源技术，Android和IOS皆可运行</p>
       </div>
@@ -60,12 +60,12 @@ background-image: linear-gradient(45deg, #FBDA61 0%, #FF5ACD 100%);
       </div>
     </div>
     <div
-        class="bg-dark me-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center text-white overflow-hidden rounded-3  wow animate__animated animate__fadeInRight"
+        class="bg-dark me-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center text-white overflow-hidden rounded-3  wow animate__animated animate__fadeIn"
         style="background-color: #08AEEA;
 background-image: linear-gradient(0deg, #08AEEA 0%, #2AF598 100%);
 
 ">
-      <div class="my-3 py-3">
+      <div class="my-3 py-3  wow animate__animated animate__fadeInRight">
         <h2 class="display-5">行业标准方案</h2>
         <p class="lead">应用商店，无数应用争奇斗艳；看今朝，程序员谱写代码浪漫</p>
       </div>
@@ -77,7 +77,7 @@ background-image: linear-gradient(0deg, #08AEEA 0%, #2AF598 100%);
   </div>
   <div class="d-md-flex flex-md-equal w-100 my-md-3 ps-md-3">
     <div
-        class="bg-light me-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden rounded-3 wow animate__animated animate__fadeInLeft">
+        class="bg-light me-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden rounded-3 wow animate__animated animate__fadeIn">
       <div class="box">
         <span></span>
         <div class="content">
@@ -101,6 +101,7 @@ import image_app from "../assets/images/app.png";
 import image_mini_app from "../assets/images/miniapp.png";
 import image_robot from "../assets/images/robot.png";
 import image_web from "../assets/images/web.png";
+import WOW from "wow.js";
 
 // import image_app from 'src/assets/images/app.png'
 // import image_mini_app from 'src/assets/images/miniapp.png'
@@ -125,6 +126,12 @@ let products = ref([
     image_url: image_web
   },
 ])
+
+let wow = new WOW({
+  boxClass: "wow", // animated element css class (default is wow)
+  animateClass: "animate__animated"
+})
+wow.init()
 </script>
 
 <style scoped>
@@ -238,11 +245,6 @@ let products = ref([
 }
 
 
-
-
-
-
-
 /* From uiverse.io by @Codewithvinay */
 .box {
   position: relative;
@@ -317,7 +319,7 @@ let products = ref([
   opacity: 0;
   transition: 0.1s;
   animation: animate 2s ease-in-out infinite;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.08)
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08)
 }
 
 .box span::before {
@@ -340,7 +342,7 @@ let products = ref([
   backdrop-filter: blur(10px);
   opacity: 0;
   transition: 0.5s;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
   animation-delay: -1s;
 }
 
@@ -374,4 +376,73 @@ let products = ref([
   color: #fff;
   margin-bottom: 10px;
 }
+
+
+/* From uiverse.io by @ShadowShahriar */
+#apply {
+  --border-radius: 15px;
+  --border-width: 4px;
+  appearance: none;
+  position: relative;
+  padding: 1em 2em;
+  border: 0;
+  /*background-color: #212121;*/
+  font-family: "Roboto", Arial, "Segoe UI", sans-serif;
+  font-size: 18px;
+  font-weight: 500;
+  /*color: #000000;*/
+  z-index: 2;
+}
+
+#apply::after {
+  --m-i: linear-gradient(#000, #000);
+  --m-o: content-box, padding-box;
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  padding: var(--border-width);
+  border-radius: var(--border-radius);
+  background-image: conic-gradient(
+      #488cfb,
+      #29dbbc,
+      #ddf505,
+      #ff9f0e,
+      #e440bb,
+      #655adc,
+      #488cfb
+  );
+  -webkit-mask-image: var(--m-i), var(--m-i);
+  mask-image: var(--m-i), var(--m-i);
+  -webkit-mask-origin: var(--m-o);
+  mask-origin: var(--m-o);
+  -webkit-mask-clip: var(--m-o);
+  mask-composite: exclude;
+  -webkit-mask-composite: destination-out;
+  filter: hue-rotate(0);
+  animation: rotate-hue linear 500ms infinite;
+  animation-play-state: paused;
+}
+
+#apply:hover::after {
+  animation-play-state: running;
+}
+
+@keyframes rotate-hue {
+  to {
+    filter: hue-rotate(1turn);
+  }
+}
+
+#apply,
+#apply::after {
+  box-sizing: border-box;
+}
+
+#apply:active {
+  --border-width: 5px;
+}
+
 </style>

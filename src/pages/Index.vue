@@ -1,7 +1,7 @@
 <template>
   <Navigate/>
-  <div class="container wow animate__animated animate__fadeIn" data-wow-delay="0.1s">
-    <header class="rounded-3 pt-5 py-5 bg-image" :style="{
+  <div class="container mt-2 wow animate__animated animate__fadeIn" data-wow-delay="0.1s">
+    <header class="rounded-3 bg-image" :style="{
       backgroundImage: `url(${img})`
     }">
       <div class="container">
@@ -15,12 +15,9 @@
         </div>
       </div>
     </header>
-  </div>
-
-  <div class="container">
-    <div class="row align-items-md-stretch py-4">
+    <div class="row align-items-md-stretch mt-4">
       <div class="col-md-6 wow animate__animated animate__fadeIn" data-wow-delay="0.6s">
-        <div class="h-100 p-5 rounded-3 bg-dark text-white bg-image"  :style="{
+        <div class="h-100 p-5 rounded-3 bg-dark text-white bg-image" :style="{
       backgroundImage: `url(${img_001})`
     }">
           <h2 class="text-gradient-style-1">基于GRPC实现多语言微服务架构</h2>
@@ -39,7 +36,7 @@
       </div>
     </div>
 
-    <div class="row align-items-md-stretch mb-4">
+    <div class="row align-items-md-stretch mt-4">
       <div class="col-md-6 wow animate__animated animate__slideInLeft" data-wow-delay="0.3s" style="height: auto">
         <div class="h-100 p-5 rounded-3 text-white"
              style="background-image: linear-gradient(to right, #fa709a 0%, #fee140 100%);">
@@ -51,13 +48,7 @@
       </div>
       <div class="col-md-6 mt-sm-4 mt-md-0 mt-xs-4 mt-4 wow animate__animated animate__slideInRight"
            data-wow-delay="0.6s" style="height: auto">
-        <div class="h-100 p-5 rounded-3 bg-dark text-white"
-             style="background-image: url('/src/assets/images/student2.webp');
-    background-repeat: no-repeat;
-    background-attachment: scroll;
-    background-position: center center;
-    background-size: cover"
-        >
+        <div class="h-100 p-5 rounded-3 bg-dark text-white">
           <h2></h2>
           <p></p>
           <button class="btn btn-outline-light" type="button">了解更多</button>
@@ -65,7 +56,7 @@
       </div>
     </div>
     <!-- Features section-->
-    <section id="features">
+    <section id="features" class="mt-4">
       <div class="pt-5 bg-light text-white rounded-3 gradient-animation">
         <div class="container row gx-5">
           <!--                 style="background-image: url('images/stars.svg')"-->
@@ -133,12 +124,10 @@
         </div>
       </div>
       <div class="row">
-        <div class="col-lg-4 mb-5">
+        <div class="col-lg-4 mb-5 wow animate__animated animate__fadeIn" data-wow-delay="0.2s">
           <div class="card h-100 shadow border-0">
-            <div id="lottie_1" style="height: 15rem" class="wow animate__animated animate__fadeIn"
-                 data-wow-delay="0.2s"></div>
-            <div class="card-body p-4 text-gradient-style-3 wow animate__animated animate__fadeIn"
-                 data-wow-delay="0.2s">
+            <div id="lottie_1" style="height: 15rem"></div>
+            <div class="card-body p-4 text-gradient-style-3">
               <div>前端技术</div>
               <a class="text-decoration-none link-dark stretched-link"><h5 class="card-title mb-3">
                 vue、react、reactnative</h5></a>
@@ -154,11 +143,11 @@
             </div>
           </div>
         </div>
-        <div class="col-lg-4 mb-5" data-wow-delay="0.4s">
+        <div class="col-lg-4 mb-5 wow animate__animated animate__fadeIn" data-wow-delay="0.4s">
           <div class="card h-100 shadow border-0">
-            <div id="lottie_2" style="height: 15rem" class="wow animate__animated animate__fadeIn"
-                 data-wow-delay="0.4s"></div>
-            <div class="card-body p-4 text-gradient-style-4 wow animate__animated animate__fadeIn"
+            <div id="lottie_2" style="height: 15rem"
+            ></div>
+            <div class="card-body p-4 text-gradient-style-4"
                  data-wow-delay="0.4s">
               <!--                        <div class="badge bg-primary bg-gradient rounded-pill mb-2">后端技术</div>-->
               <div>后端技术</div>
@@ -173,11 +162,10 @@
             </div>
           </div>
         </div>
-        <div class="col-lg-4 mb-5" data-wow-delay="0.6s">
+        <div class="col-lg-4 mb-5 wow animate__animated animate__fadeIn" data-wow-delay="0.6s">
           <div class="card h-100 shadow border-0">
-            <div id="lottie_3" style="height: 15rem" class="wow animate__animated animate__fadeIn"
-                 data-wow-delay="0.6s"></div>
-            <div class="card-body p-4 text-gradient-style-5 wow animate__animated animate__fadeIn"
+            <div id="lottie_3" style="height: 15rem"></div>
+            <div class="card-body p-4 text-gradient-style-5"
                  data-wow-delay="0.6s">
               <!--                        <div class="badge bg-primary bg-gradient rounded-pill mb-2">服务器</div>-->
               <div>服务器</div>
@@ -198,40 +186,62 @@
 
 
     <!--Waves Container-->
-<!--    <div>-->
-<!--      <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"-->
-<!--           viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">-->
-<!--        <defs>-->
-<!--          <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z"/>-->
-<!--        </defs>-->
-<!--        <g class="parallax">-->
-<!--          <use xlink:href="#gentle-wave" x="48" y="0" fill="rgba(255,255,255,0.7"/>-->
-<!--          <use xlink:href="#gentle-wave" x="48" y="3" fill="rgba(255,255,255,0.5)"/>-->
-<!--          <use xlink:href="#gentle-wave" x="48" y="5" fill="rgba(255,255,255,0.3)"/>-->
-<!--          <use xlink:href="#gentle-wave" x="48" y="7" fill="#fff"/>-->
-<!--        </g>-->
-<!--      </svg>-->
-<!--    </div>-->
+    <!--    <div>-->
+    <!--      <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"-->
+    <!--           viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">-->
+    <!--        <defs>-->
+    <!--          <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z"/>-->
+    <!--        </defs>-->
+    <!--        <g class="parallax">-->
+    <!--          <use xlink:href="#gentle-wave" x="48" y="0" fill="rgba(255,255,255,0.7"/>-->
+    <!--          <use xlink:href="#gentle-wave" x="48" y="3" fill="rgba(255,255,255,0.5)"/>-->
+    <!--          <use xlink:href="#gentle-wave" x="48" y="5" fill="rgba(255,255,255,0.3)"/>-->
+    <!--          <use xlink:href="#gentle-wave" x="48" y="7" fill="#fff"/>-->
+    <!--        </g>-->
+    <!--      </svg>-->
+    <!--    </div>-->
     <!--Waves end-->
-
-    <Footer/>
+    <div class="row py-5">
+    </div>
   </div>
+  <Footer/>
+
 </template>
 
 <script setup>
 import Navigate from "../components/Navigate.vue";
+import Footer from "./Footer.vue";
 import WOW from 'wow.js'
 import {onMounted} from "vue";
 import lottie from 'lottie-web';
 import img from '/src/assets/images/mac_colorful.webp'
 import img_001 from '/src/assets/images/video.webp'
 
-import lottie_json_1 from'/src/assets/lottie/lottie_json_1.json'
-import lottie_json_2 from'/src/assets/lottie/lottie_json_2.json'
-import lottie_json_3 from'/src/assets/lottie/lottie_json_3.json'
-import Footer from "./Footer.vue";
+import lottie_json_1 from '/src/assets/lottie/lottie_json_1.json'
+import lottie_json_2 from '/src/assets/lottie/lottie_json_2.json'
+import lottie_json_3 from '/src/assets/lottie/lottie_json_3.json'
+
+import _ from 'lodash';
 
 onMounted(() => {
+  window.addEventListener('scroll', _.throttle((x) => {
+    if (window.pageYOffset > 1400) {
+      document.querySelector('body').style.backgroundColor = '#000000'
+      let x = document.querySelectorAll('.card.h-100.shadow.border-0')
+      for(let i=0;i<x.length;i++){
+        x[i].style.backgroundColor='#000000'
+      }
+    } else {
+      document.querySelector('body').style.backgroundColor = '#ffffff'
+      let x = document.querySelectorAll('.card.h-100.shadow.border-0')
+      for(let i=0;i<x.length;i++){
+        x[i].style.backgroundColor='#ffffff'
+      }
+    }
+  }, 300))
+  document.querySelector('body').style.transition = "1s all"
+
+
   let wow = new WOW({
     boxClass: "wow", // animated element css class (default is wow)
     animateClass: "animate__animated"
@@ -244,7 +254,7 @@ onMounted(() => {
     loop: true,
     autoplay: true,
     // path: '/src/assets/lottie/lottie_json_1.json',
-    animationData:lottie_json_1
+    animationData: lottie_json_1
   });
   lottie.loadAnimation({
     container: document.querySelector("#lottie_2"),
@@ -262,17 +272,10 @@ onMounted(() => {
   });
 })
 
+
 </script>
 
 <style scoped>
-
-.nav-link {
-  color: black;
-}
-
-.nav-link:hover {
-  color: rebeccapurple;
-}
 
 @keyframes gradient-animation-keyframe {
   0% {
