@@ -49,6 +49,6 @@ function selectLanguage(index) {
 
 <style scoped>
 footer {
-  background-color: #f5f5f7;
+  /*background-color: #f5f5f7;*/
 }
 </style>

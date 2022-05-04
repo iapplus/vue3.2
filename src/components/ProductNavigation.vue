@@ -3,7 +3,7 @@
     <div class="row col-12 col-md-6 m-auto justify-content-center">
       <div v-for="(item,index) in products" class="col-3 align-items-center py-2"
            style="cursor: pointer;color: black">
-        <router-link :to="item.path" style="color:black;" active-class="a">
+        <router-link :to="item.path" style="color:black" active-class="a">
           <div class="row align-items-center">
             <span class="col-12 text-center my-1">{{ item.title }}</span>
             <div class="col-12 text-center">

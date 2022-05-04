@@ -1,10 +1,11 @@
 <template>
-  <div class="position-relative overflow-hidden p-3 p-md-5 m-md-3 text-center bg-light rounded-3 wow animate__animated animate__fadeIn">
-    <div class="col-md-5 p-lg-5 mx-auto">
-      <h1 class="display-4 fw-normal">react native 高仿某自营电商APP</h1>
+  <div class="position-relative overflow-hidden p-3 p-md-5 m-md-3 text-center bg-dark rounded-3 wow animate__animated animate__fadeIn">
+    <div class="col-md-7 p-lg-5 mx-auto wow animate__animated animate__slideInUp text-gradient-style-3" data-wow-delay="0.4s">
+      <h6 class="display-6 fw-normal">ReactNative 高仿某自营电商APP</h6>
       <p class="lead fw-normal">主流技术，稳定可靠。</p>
-      <button id="apply">申请体验</button>
     </div>
+    <button id="apply" class="wow animate__animated animate__fadeIn animate__slow"  data-wow-delay="1s">申请体验</button>
+
     <div class="product-device shadow-sm d-none d-md-block wow animate__animated animate__fadeIn">
       <img src="/src/assets/images/app_2.png" class="d-block w-100" alt="...">
     </div>
@@ -157,7 +158,7 @@ wow.init()
 
 .product-device {
   position: absolute;
-  right: 10%;
+  right: -10%;
   bottom: -30%;
   width: 300px;
   height: 540px;
@@ -178,10 +179,10 @@ wow.init()
 }
 
 .product-device-2 {
-  top: -25%;
+  top: -16%;
   right: auto;
   bottom: 0;
-  left: 5%;
+  left: -7%;
   background-color: #e5e5e5;
 }
 
@@ -386,11 +387,11 @@ wow.init()
   position: relative;
   padding: 1em 2em;
   border: 0;
-  /*background-color: #212121;*/
+  background-color: transparent;
   font-family: "Roboto", Arial, "Segoe UI", sans-serif;
   font-size: 18px;
   font-weight: 500;
-  /*color: #000000;*/
+  color: #ffffff;
   z-index: 2;
 }
 

@@ -6,6 +6,8 @@ import ProductApplication from "./pages/ProductApplication.vue";
 import ProductCrawler from "./pages/ProductCrawler.vue";
 import ProductWeb from "./pages/ProductWeb.vue";
 import ProductWechat from "./pages/ProductWechat.vue";
+import Article from "./pages/Article.vue";
+import Course from "./pages/Course.vue";
 
 
 const routes = [
@@ -56,19 +58,28 @@ const routes = [
         ]
     },
     {
-        path: '/component', component: Index
+        path: '/article',
+        name: "article",
+        component: Article
+    },
+    {
+        path: '/course',
+        name: "course",
+        component: Course
     }
 ]
 
 const router = createRouter({
     history: createWebHistory(),
-    linkActiveClass:'active',
+    linkActiveClass: 'active',
     routes: routes,
 });
 
 router.beforeEach((to, from, next) => {
     console.log('to', to)
-    next()
+    setTimeout(function (){
+        next()
+    },50)
 })
 
 

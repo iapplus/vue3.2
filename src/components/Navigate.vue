@@ -27,9 +27,6 @@
               {{$t('home.article')}}
             </router-link>
           </li>
-          <!--          <li class="nav-item">-->
-          <!--            <a class="nav-link" href="/component">新闻</a>-->
-          <!--          </li>-->
         </ul>
       </div>
     </div>

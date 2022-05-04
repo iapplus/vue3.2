@@ -15,7 +15,7 @@
       </div>
     </header>
     <div class="row align-items-md-stretch mt-4">
-      <div class="col-md-6 wow animate__animated animate__fadeIn" data-wow-delay="0.4s">
+      <div class="col-md-6 mt-sm-4 mt-md-0 mt-xs-4 mt-4 wow animate__animated animate__fadeIn" data-wow-delay="0.4s">
         <div class="h-100 p-5 rounded-3 bg-dark text-white bg-image" :style="{
       backgroundImage: `url(${img_001})`
     }">
@@ -36,19 +36,18 @@
     </div>
 
     <div class="row align-items-md-stretch mt-4">
-      <div class="col-md-6 wow animate__animated animate__slideIn" data-wow-delay="0.8s" style="height: auto">
+      <div class="col-md-6 mt-sm-4 mt-md-0 mt-xs-4 mt-4 wow animate__animated animate__slideIn" data-wow-delay="0.8s" style="height: auto">
         <div class="h-100 p-5 rounded-3 text-white"
              style="background-image: linear-gradient(to right, #fa709a 0%, #fee140 100%);">
           <h2>响应式网页开发</h2>
-          <p>移动端、个人电脑、平板使用一套代码</p>
+          <p>移动端、个人电脑、平板共用一套代码</p>
           <button class="btn btn-outline-light" type="button">了解更多</button>
         </div>
-
       </div>
       <div class="col-md-6 mt-sm-4 mt-md-0 mt-xs-4 mt-4 wow animate__animated animate__slideIn" data-wow-delay="1s" style="height: auto">
         <div class="h-100 p-5 rounded-3 bg-dark text-white">
-          <h2>能进行自我提升的有价值课程</h2>
-          <p>移动端、个人电脑、平板使用一套代码</p>
+          <h2>能进行自我提升的课程</h2>
+          <p>时间就是生命</p>
           <button class="btn btn-outline-light" type="button">了解更多</button>
         </div>
       </div>
