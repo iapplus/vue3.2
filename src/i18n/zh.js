@@ -8,7 +8,7 @@ export default {
     project:{
         mobile_app:"移动应用",
         crawler:"爬虫",
-        responsive_web:"响应式前端"
+        responsive_web:"响应式网页"
     }
 }
 

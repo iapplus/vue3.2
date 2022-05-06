@@ -98,25 +98,15 @@ background-image: linear-gradient(0deg, #08AEEA 0%, #2AF598 100%);
 
 <script setup>
 import {ref} from "vue";
-import image_app from "../assets/images/app.png";
-import image_mini_app from "../assets/images/miniapp.png";
+import image_app from "../assets/images/mobile.svg";
 import image_robot from "../assets/images/robot.png";
 import image_web from "../assets/images/web.png";
 import WOW from "wow.js";
-
-// import image_app from 'src/assets/images/app.png'
-// import image_mini_app from 'src/assets/images/miniapp.png'
-// import image_robot from 'src/assets/images/robot.png'
-// import image_web from 'src/assets/images/web.png'
 
 let products = ref([
   {
     title: 'APP',
     image_url: image_app
-  },
-  {
-    title: '微信生态',
-    image_url: image_mini_app
   },
   {
     title: '爬虫',

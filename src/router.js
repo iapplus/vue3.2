@@ -30,11 +30,11 @@ const routes = [
     },
     {
         path: '/product', component: Product, children: [
-            {
-                path: '',
-                name: "default",
-                component: ProductApplication
-            },
+            // {
+            //     path: '',
+            //     name: "default",
+            //     component: ProductApplication
+            // },
             {
                 path: 'application',
                 name: "application",
@@ -53,19 +53,32 @@ const routes = [
             {
                 path: 'wechat',
                 name: "wechat",
-                component: ProductWechat
+                component: () => import('./pages/ProductWechat.vue')
             },
         ]
     },
     {
         path: '/article',
         name: "article",
-        component: Article
+        component: () => import('./pages/Article.vue')
     },
     {
         path: '/course',
         name: "course",
-        component: Course
+        component: () => import('./pages/Course.vue')
+    },
+    {
+        path: '/404',
+        name: 'NotFound',
+        meta: {
+            title: 'Page not found',
+            isLogin: false
+        },
+        component: () => import('./pages/404.vue')
+    },
+    {
+        path: '/:catchAll(.*)',
+        redirect: '/404'
     }
 ]
 
@@ -77,9 +90,7 @@ const router = createRouter({
 
 router.beforeEach((to, from, next) => {
     console.log('to', to)
-    setTimeout(function (){
-        next()
-    },50)
+    next()
 })
 
 

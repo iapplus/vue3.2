@@ -13,7 +13,7 @@
             </router-link>
           </li>
           <li class="nav-item">
-            <router-link to="/product" class="nav-link" exact>
+            <router-link to="/product/application" class="nav-link" exact>
               {{$t('home.project')}}
             </router-link>
           </li>

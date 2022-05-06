@@ -1,17 +1,13 @@
 <template>
   <div>
-    --
+    -{{a}}-{{b}}-
     <slot name="aa"></slot>
     <slot name="bb"></slot>
-
-    --
   </div>
 </template>
 
-<script>
-export default {
-  name: "Abcdef"
-}
+<script setup>
+defineProps(['a','b'])
 </script>
 
 <style scoped>

@@ -6,8 +6,8 @@
 
 import {defineExpose, defineProps, ref} from "vue";
 
-const age = ref(0)
-const msg = ref("abc")
+const age = ref(111)
+const msg = ref("-------------")
 defineExpose({msg, age})
 
 defineProps({

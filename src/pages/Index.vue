@@ -6,7 +6,9 @@
     }">
       <div class="container">
         <div class="col-md-8 p-lg-5 mx-auto my-3 h-100">
-          <h1 class="display-6 fw-normal">基于Qt的自动办公效率工具</h1>
+          <h1 class="display-6 fw-normal">基于Qt的自动办公效率工具
+<!--            <Test ref="mTest" msg1="abcdef" age1="😂"/>-->
+          </h1>
           <p class="lead fw-normal">世界级大型电商网站，视频网站均可抓取</p>
           <p class="lead fw-normal">无图模式降低内存消耗的同时减少了GPU的计算以及带宽的占用，爬取效率提升80%</p>
           <p class="lead fw-normal">无头模式可以部署在Linux系统</p>
@@ -36,7 +38,8 @@
     </div>
 
     <div class="row align-items-md-stretch mt-4">
-      <div class="col-md-6 mt-sm-4 mt-md-0 mt-xs-4 mt-4 wow animate__animated animate__slideIn" data-wow-delay="0.8s" style="height: auto">
+      <div class="col-md-6 mt-sm-4 mt-md-0 mt-xs-4 mt-4 wow animate__animated animate__slideIn" data-wow-delay="0.8s"
+           style="height: auto">
         <div class="h-100 p-5 rounded-3 text-white"
              style="background-image: linear-gradient(to right, #fa709a 0%, #fee140 100%);">
           <h2>响应式网页开发</h2>
@@ -44,7 +47,8 @@
           <button class="btn btn-outline-light" type="button">了解更多</button>
         </div>
       </div>
-      <div class="col-md-6 mt-sm-4 mt-md-0 mt-xs-4 mt-4 wow animate__animated animate__slideIn" data-wow-delay="1s" style="height: auto">
+      <div class="col-md-6 mt-sm-4 mt-md-0 mt-xs-4 mt-4 wow animate__animated animate__slideIn" data-wow-delay="1s"
+           style="height: auto">
         <div class="h-100 p-5 rounded-3 bg-dark text-white">
           <h2>能进行自我提升的课程</h2>
           <p>时间就是生命</p>
@@ -209,9 +213,9 @@
 import Navigate from "../components/Navigate.vue";
 import Footer from "./Footer.vue";
 import WOW from 'wow.js'
-import {onMounted} from "vue";
+import {onMounted, ref} from "vue";
 import lottie from 'lottie-web';
-import img from '/src/assets/images/mac_colorful.webp'
+import img from '/src/assets/images/mac_colorful.jpg'
 import img_001 from '/src/assets/images/video.webp'
 
 import lottie_json_1 from '/src/assets/lottie/lottie_json_1.json'
@@ -219,20 +223,23 @@ import lottie_json_2 from '/src/assets/lottie/lottie_json_2.json'
 import lottie_json_3 from '/src/assets/lottie/lottie_json_3.json'
 
 import _ from 'lodash';
+import Test from "../components/Test.vue";
+import Abcdef from "../components/Abcdef.vue";
+
 
 onMounted(() => {
   window.addEventListener('scroll', _.throttle((x) => {
     if (window.pageYOffset > 1400) {
       document.querySelector('body').style.backgroundColor = '#000000'
       let x = document.querySelectorAll('.card.h-100.shadow.border-0')
-      for(let i=0;i<x.length;i++){
-        x[i].style.backgroundColor='#000000'
+      for (let i = 0; i < x.length; i++) {
+        x[i].style.backgroundColor = '#000000'
       }
     } else {
       document.querySelector('body').style.backgroundColor = '#ffffff'
       let x = document.querySelectorAll('.card.h-100.shadow.border-0')
-      for(let i=0;i<x.length;i++){
-        x[i].style.backgroundColor='#ffffff'
+      for (let i = 0; i < x.length; i++) {
+        x[i].style.backgroundColor = '#ffffff'
       }
     }
   }, 300))
