@@ -4,7 +4,7 @@
 
 <script setup>
 
-import {defineExpose, defineProps, ref} from "vue";
+import {ref} from "vue";
 
 const age = ref(111)
 const msg = ref("-------------")

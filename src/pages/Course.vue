@@ -1,12 +1,10 @@
 <template>
-  <Navigate/>
-
-  Course
+  <div>
+    Course
+  </div>
 </template>
 
 <script setup>
-import Navigate from "../components/Navigate.vue";
-
 </script>
 
 <style scoped>

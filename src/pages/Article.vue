@@ -1,29 +1,31 @@
 <template>
-  <Navigate/>
-  <div style="background-color: #f5f5f7">
-    <div class="container pt-3 d-flex flex-column flex-lg-row flex-md-column">
-      <div class="col-12 col-md-12 col-lg-8">
-        <div v-for="(item,index) in article_items"
-             class="d-flex flex-column flex-md-row flex-lg-row mt-4 bg-white p-4 shadow-sm rounded-3  wow animate__animated animate__fadeIn"  data-wow-delay="0.4s" style="cursor: pointer">
-          <div class="d-flex justify-content-center align-items-center overflow-hidden rounded-3 article_item_img">
-            <img :src="img_001" alt="" style="width: 150%">
+  <div>
+    <div style="background-color:rgb(21,22,33)">
+      <div class="container pt-3 d-flex flex-column flex-lg-row flex-md-column">
+        <div class="col-12 col-md-12 col-lg-12">
+          <div v-for="(item,index) in article_items"
+               class="d-flex flex-column flex-md-row flex-lg-row mt-4 p-4 shadow-sm rounded-3"  data-wow-delay="0.4s" style="background-color:rgba(26, 28, 47, 0.6);cursor: pointer">
+            <div class="d-flex justify-content-center align-items-center overflow-hidden rounded-3 article_item_img">
+              <img :src="img_001" alt="" style="width: 150%">
+            </div>
+            <div class="px-4 d-flex flex-column justify-content-between">
+              <div>
+                <h4 class="text-white fw-normal mt-4">{{ item.title }}</h4>
+              </div>
+              <div class="text-white-50">
+                {{ item.digest }}
+              </div>
+
+              <div style="display: flex;justify-content: space-between">
+                <div class="btn text-white-50">
+                  {{ item.date }}
+                </div>
+                <div class="btn btn-danger">
+                  阅读
+                </div>
+              </div>
+            </div>
           </div>
-          <div class="px-4 d-flex flex-column justify-content-between">
-            <div>
-              <h4>{{ item.title }}</h4>
-            </div>
-            <div style="color: rgba(0,0,0,.6)">
-              {{ item.digest }}
-            </div>
-            <div>
-              {{ item.date }}
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="col-lg-4 col-12">
-        <div class="bg-white m-4 shadow-sm rounded-1 p-4">
-          asdasd
         </div>
       </div>
     </div>

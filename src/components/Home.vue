@@ -7,7 +7,7 @@
 </template>
 
 <script setup>
-import {computed, ref, defineExpose, defineProps} from "vue";
+import {computed, ref} from "vue";
 
 const name = ref('abc')
 const isNamePresent = computed(() => name.value + 10000)//计算属性

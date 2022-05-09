@@ -7,7 +7,8 @@ import animated from "animate.css"
 import {i18n} from './i18n'
 
 let app = createApp(App)
-
 app.config.globalProperties.$axios = axios
-
-app.use(createPinia()).use(animated).use(router).use(i18n).mount('#app')
+app.use(createPinia())
+    .use(router)
+    .use(i18n)
+    .mount('#app')

@@ -1,22 +1,13 @@
 <template>
-  <Navigate/>
-  <ProductNavigation/>
-
-<!--  <transition :duration="{ enter: 500, leave: 500 }"-->
-<!--              enter-active-class="animate__animated animate__fadeIn"-->
-<!--              leave-active-class="animate__animated animate__fadeOut">-->
-
-<!--  </transition>-->
-  <main class="container">
-    <router-view/>
-  </main>
-
-
-
+  <div style="background-color:rgb(21,22,33)">
+    <ProductNavigation/>
+    <main class="container">
+      <router-view/>
+    </main>
+  </div>
 </template>
 
 <script setup>
-import Navigate from "../components/Navigate.vue";
 import ProductNavigation from "../components/ProductNavigation.vue";
 </script>
 

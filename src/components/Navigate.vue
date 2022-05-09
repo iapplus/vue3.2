@@ -1,5 +1,5 @@
 <template>
-  <nav class="navbar navbar-expand-lg navbar-dark bg-danger sticky-top">
+  <nav class="navbar navbar-expand-lg navbar-dark sticky-top"  style="background-color: rgb(21,22,33)">
     <div class="container px-5">
       <a class="navbar-brand" href="/">iapplus</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
@@ -40,6 +40,6 @@
 
 <style scoped>
 nav {
-  opacity: 0.9;
+  /*opacity: 0.9;*/
 }
 </style>
