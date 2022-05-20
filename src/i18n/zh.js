@@ -4,6 +4,7 @@ export default {
         project:"项目",
         course:"课程",
         article:"文章",
+        login:"登陆"
     },
     project:{
         mobile_app:"移动应用",

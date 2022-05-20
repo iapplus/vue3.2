@@ -4,6 +4,7 @@ export default {
         project:"project",
         course:"course",
         article:"article",
+        login:"login"
     },
     project:{
         mobile_app:"mobile application",

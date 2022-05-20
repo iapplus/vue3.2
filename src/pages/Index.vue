@@ -2,7 +2,7 @@
   <div style="background-color:rgb(21,22,33)">
     <div class="container" data-wow-delay="0.2s">
       <div style="min-height: 20rem">
-        <div class="col-md-8 p-lg-5 mx-auto h-100 hidd wow animate__animated animate__slideInUp">
+        <div class="col-md-8 p-lg-5 mx-auto h-100 hide wow animate__animated animate__fadeInDown">
           <h1 class="display-3 fw-normal text-gradient-style-6">为全世界开发应用程序</h1>
         </div>
       </div>
@@ -228,6 +228,11 @@ import lottie_json_3 from '/src/assets/lottie/lottie_json_3.json'
 
 import _ from 'lodash';
 
+let wow = new WOW({
+  boxClass: "wow", // animated element css class (default is wow)
+  animateClass: "animate__animated"
+})
+wow.init()
 
 onMounted(() => {
   // window.addEventListener('scroll', _.throttle((x) => {
@@ -248,11 +253,6 @@ onMounted(() => {
   // document.querySelector('body').style.transition = "1s all"
 
 
-  let wow = new WOW({
-    boxClass: "wow", // animated element css class (default is wow)
-    animateClass: "animate__animated"
-  })
-  wow.init()
 
   lottie.loadAnimation({
     container: document.querySelector("#lottie_1"),

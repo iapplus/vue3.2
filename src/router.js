@@ -5,26 +5,9 @@ import Product from "./pages/Product.vue";
 import ProductApplication from "./pages/ProductApplication.vue";
 import ProductCrawler from "./pages/ProductCrawler.vue";
 import ProductWeb from "./pages/ProductWeb.vue";
-import ProductWechat from "./pages/ProductWechat.vue";
-import Article from "./pages/Article.vue";
-import Course from "./pages/Course.vue";
 
 
 const routes = [
-    // {
-    //     path: '/index', component: Layout, children: [
-    //         {
-    //             path: 'a',
-    //             name: "a",
-    //             component: AboutPage
-    //         },
-    //         {
-    //             path: 'b',
-    //             name: "b",
-    //             component: import("./pages/Layout.vue")
-    //         }
-    //     ],
-    // },
     {
         path: '/', component: Index
     },
