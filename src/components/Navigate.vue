@@ -20,7 +20,7 @@
             </router-link>
           </li>
           <li class="nav-item">
-            <router-link to="/course" class="nav-link" exact>
+            <router-link :to="{name:'all_courses'}" class="nav-link" exact>
               {{ $t('home.course') }}
             </router-link>
           </li>
@@ -30,7 +30,7 @@
             </router-link>
           </li>
           <li class="nav-item">
-            <div class="nav-link" @click="showModal">
+            <div class="nav-link" style="cursor: pointer" @click="showModal">
               {{ $t('home.login') }}
             </div>
           </li>
@@ -63,9 +63,12 @@ nav {
   left: 0;
   width: 100%;
   height: 100%;
-  filter: blur(10px);
-  backdrop-filter: blur(10px);
   display: table;
-  transition: all 0.3s ease-in;
+  transition: all 0.6s ease-in;
+  -webkit-transition: all 0.6s ease-in;
+  filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  -webkit-filter:blur(10px) ;
+  backdrop-filter: blur(10px);
 }
 </style>

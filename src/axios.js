@@ -22,10 +22,12 @@ x.interceptors.request.use(config => {
 })
 
 // 接收
-x.interceptors.response.use(config => {
+x.interceptors.response.use(response => {
+    // response.data
+    // response.data.code
     console.log("请求结束")
     // load.close()
-    return config
+    return response
 }, error => {
     return Promise.reject(error)
 })

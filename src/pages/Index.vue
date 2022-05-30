@@ -3,7 +3,7 @@
     <div class="container" data-wow-delay="0.2s">
       <div style="min-height: 20rem">
         <div class="col-md-8 p-lg-5 mx-auto h-100 hide wow animate__animated animate__fadeInDown">
-          <h1 class="display-3 fw-normal text-gradient-style-6">为全世界开发应用程序</h1>
+          <h1 class="display-3 fw-normal text-gradient-style-6">为全世界开发应用程序{{count}}</h1>
         </div>
       </div>
 <!--      <header class="rounded-3 bg-image  wow animate__animated animate__fadeIn" :style="{-->
@@ -46,7 +46,7 @@
       <div class="row align-items-md-stretch mt-4">
         <div class="col-md-6 mt-sm-4 mt-md-0 mt-xs-4 mt-4 wow animate__animated animate__fadeIn" data-wow-delay="1s"
              style="height: auto">
-          <div class="h-100 p-5 rounded-3 text-white">
+          <div class="h-100 p-5 rounded-3 text-white" style="background-color: rgba(26,28,47,0.6)">
             <h2>响应式网页开发</h2>
             <p>移动端、个人电脑、平板共用一套代码</p>
             <button class="btn btn-outline-light" type="button">了解更多</button>
@@ -150,7 +150,7 @@
             </div>
           </div>
           <div class="col-lg-4 mb-5 wow animate__animated animate__fadeIn" data-wow-delay="0.4s">
-            <div class="border-0">
+            <div class="border-0 overflow-hidden">
               <div id="lottie_2" style="height: 15rem"
               ></div>
               <div class="card-body p-4 text-gradient-style-4"
@@ -218,23 +218,27 @@
 import Footer from "./Footer.vue";
 import WOW from 'wow.js'
 import {onMounted, ref} from "vue";
-import lottie from 'lottie-web';
-import img from '/src/assets/images/mac_colorful.jpg'
-import img_001 from '/src/assets/images/video.webp'
-
-import lottie_json_1 from '/src/assets/lottie/lottie_json_1.json'
-import lottie_json_2 from '/src/assets/lottie/lottie_json_2.json'
-import lottie_json_3 from '/src/assets/lottie/lottie_json_3.json'
-
 import _ from 'lodash';
+import lottie from "lottie-web";
+import {get} from "../http"
+import useCounterStore from "../store/main"
+import {storeToRefs} from "pinia";
 
-let wow = new WOW({
+
+(new WOW({
   boxClass: "wow", // animated element css class (default is wow)
   animateClass: "animate__animated"
-})
-wow.init()
+})).init()
 
 onMounted(() => {
+  let store = useCounterStore()
+  const { count,double } = storeToRefs(store);
+  // console.log(store.count)
+  console.log('调用',count.value)
+  count.value = 2000
+  console.log('调用',count.value)
+  console.log('double',double)
+
   // window.addEventListener('scroll', _.throttle((x) => {
   //   if (window.pageYOffset > 1400) {
   //     document.querySelector('body').style.backgroundColor = '#000000'
@@ -251,34 +255,37 @@ onMounted(() => {
   //   }
   // }, 300))
   // document.querySelector('body').style.transition = "1s all"
+  for (let i=1;i<4;i++){
+
+    setTimeout(function (){
+      // get(`http://localhost:3000/lottie/lottie_json_${i}.json`).then((res)=>{
+      //   lottie.loadAnimation({
+      //     container: document.querySelector(`#lottie_${i}`),
+      //     renderer: 'svg',
+      //     loop: true,
+      //     autoplay: true,
+      //     path: `/lottie/lottie_json_${i}.json`,
+      //     animationData: res.data
+      //   });
+      // }).catch((err)=>{
+      //   console.log(err)
+      // })
+      lottie.loadAnimation({
+        container: document.querySelector(`#lottie_${i}`),
+        renderer: 'svg',
+        loop: true,
+        autoplay: true,
+        path: `/lottie/lottie_json_${i}.json`,
+        // animationData: res.data
+      });
+
+    },300+i*100)
+  }
 
 
 
-  lottie.loadAnimation({
-    container: document.querySelector("#lottie_1"),
-    renderer: 'svg',
-    loop: true,
-    autoplay: true,
-    // path: '/src/assets/lottie/lottie_json_1.json',
-    animationData: lottie_json_1
-  });
-  lottie.loadAnimation({
-    container: document.querySelector("#lottie_2"),
-    renderer: 'svg',
-    loop: true,
-    autoplay: true,
-    animationData: lottie_json_2
-  });
-  lottie.loadAnimation({
-    container: document.querySelector("#lottie_3"),
-    renderer: 'svg',
-    loop: true,
-    autoplay: true,
-    animationData: lottie_json_3
-  });
+
 })
-
-
 </script>
 
 <style scoped>
@@ -302,17 +309,17 @@ onMounted(() => {
   transition: background-position 10s ease-in;
 }
 
-.tttttttt {
-  font-weight: 200;
-  font-size: 1.8em;
-  text-transform: uppercase;
-  letter-spacing: 0.5em;
-}
+/*.tttttttt {*/
+/*  font-weight: 200;*/
+/*  font-size: 1.8em;*/
+/*  text-transform: uppercase;*/
+/*  letter-spacing: 0.5em;*/
+/*}*/
 
-.tttttttt .letter {
-  display: inline-block;
-  line-height: 1em;
-}
+/*.tttttttt .letter {*/
+/*  display: inline-block;*/
+/*  line-height: 1em;*/
+/*}*/
 
 .waves {
   position: relative;

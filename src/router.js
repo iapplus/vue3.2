@@ -1,7 +1,4 @@
 import {createRouter, createWebHistory} from "vue-router";
-
-import Index from "./pages/Index.vue";
-import Product from "./pages/Product.vue";
 import ProductApplication from "./pages/ProductApplication.vue";
 import ProductCrawler from "./pages/ProductCrawler.vue";
 import ProductWeb from "./pages/ProductWeb.vue";
@@ -9,10 +6,10 @@ import ProductWeb from "./pages/ProductWeb.vue";
 
 const routes = [
     {
-        path: '/', component: Index
+        path: '/', component: ()=>import("./pages/Index.vue")
     },
     {
-        path: '/product', component: Product, children: [
+        path: '/product', component: ()=>import("./pages/Product.vue"), children: [
             // {
             //     path: '',
             //     name: "default",
@@ -46,7 +43,12 @@ const routes = [
         component: () => import('./pages/Article.vue')
     },
     {
-        path: '/course',
+        path: '/courses/all',
+        name: "all_courses",
+        component: () => import('./pages/CourseList.vue')
+    },
+    {
+        path: '/course/:course_id',
         name: "course",
         component: () => import('./pages/Course.vue')
     },
