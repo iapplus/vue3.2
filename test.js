@@ -14,7 +14,7 @@
 //
 // console.log('name' in Person)
 
-var x = [1, 2, 3, 4, 5,]
-var y = x.filter(x => x%2==0).map(i=>i*100)
+let x = [1, 2, 3, 4, 5,];
+let y = x.filter(x => x % 2 === 0).map(i => i * 100);
 console.log(y)
 console.log('x'.repeat(9))

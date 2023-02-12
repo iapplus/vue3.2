@@ -1,39 +1,46 @@
-import {createRouter, createWebHistory} from "vue-router";
-import ProductApplication from "./pages/ProductApplication.vue";
-import ProductCrawler from "./pages/ProductCrawler.vue";
-import ProductWeb from "./pages/ProductWeb.vue";
-
-
+import {createRouter, createWebHashHistory, createWebHistory} from "vue-router";
+import ProductApplication from "./components/product/Application.vue";
+import ProductCrawler from "./components/product/Crawler.vue";
+import ProductWeb from "./components/product/Web.vue";
+import Product from "@/pages/Product.vue"
 const routes = [
     {
         path: '/', component: ()=>import("./pages/Index.vue")
     },
     {
-        path: '/product', component: ()=>import("./pages/Product.vue"), children: [
-            // {
-            //     path: '',
-            //     name: "default",
-            //     component: ProductApplication
-            // },
+        path: '/aa', component: ()=>import("./pages/Test.vue")
+    },
+    {
+        path: '/product', component: Product, children: [
+            {
+                path: '',
+                name: "default",
+                component: () => import('@/components/product/Application.vue')
+            },
             {
                 path: 'application',
                 name: "application",
-                component: ProductApplication
+                component: () => import('@/components/product/Application.vue')
             },
             {
                 path: 'web',
                 name: "web",
-                component: ProductWeb
+                component: () => import('@/components/product/Web.vue')
             },
             {
                 path: 'crawler',
                 name: "crawler",
-                component: ProductCrawler
+                component: () => import('@/components/product/Crawler.vue')
             },
             {
                 path: 'wechat',
                 name: "wechat",
-                component: () => import('./pages/ProductWechat.vue')
+                component: () => import('@/components/product/Wechat.vue')
+            },
+            {
+                path: '/chrome_extension',
+                name: "chrome_extension",
+                component: () => import('@/components/product/ChromeExtension.vue')
             },
         ]
     },
@@ -47,11 +54,11 @@ const routes = [
         name: "all_courses",
         component: () => import('./pages/CourseList.vue')
     },
-    {
-        path: '/course/:course_id',
-        name: "course",
-        component: () => import('./pages/Course.vue')
-    },
+    // {
+    //     path: '/course/:course_id',
+    //     name: "course",
+    //     component: () => import('./pages/Course.vue')
+    // },
     {
         path: '/404',
         name: 'NotFound',
@@ -61,10 +68,10 @@ const routes = [
         },
         component: () => import('./pages/404.vue')
     },
-    {
-        path: '/:catchAll(.*)',
-        redirect: '/404'
-    }
+    // {
+    //     path: '/:catchAll(.*)',
+    //     redirect: '/404'
+    // }
 ]
 
 const router = createRouter({
@@ -73,10 +80,10 @@ const router = createRouter({
     routes: routes,
 });
 
-router.beforeEach((to, from, next) => {
-    // console.log('to', to)
-    next()
-})
+// router.beforeEach((to, from, next) => {
+//     // console.log('to', to)
+//     next()
+// })
 
 
 export default router

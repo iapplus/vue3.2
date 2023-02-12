@@ -79,26 +79,7 @@ background-image: linear-gradient(0deg, #08AEEA 0%, #2AF598 100%);
 </template>
 
 <script setup>
-import {ref} from "vue";
-import image_app from "../assets/images/mobile.svg";
-import image_robot from "../assets/images/robot.png";
-import image_web from "../assets/images/web.png";
 import WOW from "wow.js";
-
-let products = ref([
-  {
-    title: 'APP',
-    image_url: image_app
-  },
-  {
-    title: '爬虫',
-    image_url: image_robot
-  },
-  {
-    title: '响应式网页',
-    image_url: image_web
-  },
-])
 
 let wow = new WOW({
   boxClass: "wow", // animated element css class (default is wow)

@@ -1,5 +1,5 @@
 export default {
-    home:{
+    navigation:{
         index:"Home",
         project:"project",
         course:"course",
@@ -9,6 +9,7 @@ export default {
     project:{
         mobile_app:"mobile application",
         crawler:"crawler",
-        responsive_web:"responsive web"
+        responsive_web:"responsive web",
+        ChromeExtension:"Chrome Extension"
     }
 }

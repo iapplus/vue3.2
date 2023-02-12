@@ -8,7 +8,7 @@
             <div class="col-12 text-center">
               <img style="width: 36px" :src="item.image_url" alt="">
             </div>
-            <span class="col-12 text-center my-1">{{ item.title }}</span>
+            <span class="col-12 text-center my-1">{{ $t(item.title) }}</span>
           </div>
         </router-link>
       </div>
@@ -16,13 +16,13 @@
   </div>
 </template>
 
+
 <script setup>
 import {onMounted, ref} from "vue";
 import image_app from "/src/assets/images/mobile.svg";
 import image_robot from "/src/assets/images/robot.png";
 import image_web from "/src/assets/images/web.png";
 
-import {i18n,$t} from "../i18n";
 
 
 onMounted(()=>{
@@ -31,19 +31,24 @@ onMounted(()=>{
 
 let products = ref([
   {
-    title: $t('project.mobile_app'),
+    title: 'project.mobile_app',
     image_url: image_app,
     path: {name: 'application'}
   },
   {
-    title: $t('project.responsive_web'),
+    title: 'project.responsive_web',
     image_url: image_web,
     path: {name: 'web'}
   },
   {
-    title: $t('project.crawler'),
+    title: 'project.crawler',
     image_url: image_robot,
     path: {name: 'crawler'}
+  },
+  {
+    title: 'project.ChromeExtension',
+    image_url: image_robot,
+    path: {name: 'chrome_extension'}
   }
 ])
 </script>

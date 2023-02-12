@@ -16,7 +16,7 @@
             </a>
           </small>
         </div>
-        <div class="col-12 col-md-6">
+        <div class="col-12 col-md-6 text-white">
           <h5>频道</h5>
           <div @click="selectLanguage(0)">
             中文
@@ -38,7 +38,7 @@
 
 <script setup>
 
-import {i18n} from "../i18n";
+import i18n from "../i18n";
 
 function selectLanguage(index) {
   const idx = ['zh', 'en'][index] || navigator.language.slice(0, 2);

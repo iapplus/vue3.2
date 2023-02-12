@@ -11,27 +11,27 @@
         <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
           <li class="nav-item">
             <router-link to="/" class="nav-link" exact>
-              {{ $t('home.index') }}
+              {{ $t('navigation.index') }}
             </router-link>
           </li>
           <li class="nav-item">
             <router-link to="/product/application" class="nav-link" exact>
-              {{ $t('home.project') }}
+              {{ $t('navigation.project') }}
             </router-link>
           </li>
           <li class="nav-item">
             <router-link :to="{name:'all_courses'}" class="nav-link" exact>
-              {{ $t('home.course') }}
+              {{ $t('navigation.course') }}
             </router-link>
           </li>
           <li class="nav-item">
             <router-link to="/article" class="nav-link" exact>
-              {{ $t('home.article') }}
+              {{ $t('navigation.article') }}
             </router-link>
           </li>
           <li class="nav-item">
             <div class="nav-link" style="cursor: pointer" @click="showModal">
-              {{ $t('home.login') }}
+              {{ $t('navigation.login') }}
             </div>
           </li>
         </ul>
